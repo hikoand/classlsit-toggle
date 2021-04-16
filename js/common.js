@@ -9,10 +9,22 @@ let classListNum = document.querySelector("#sidemenu").classList; //DOMTokenList
 // }
 
 //2.button
-function sidemenuAdd() {
-  classListNum.add('on');
-}
+// function sidemenuAdd() {
+//   classListNum.add('on');
+// }
+//
+// function sidemenuRemove() {
+//   classListNum.remove('on');
+// }
 
-function sidemenuRemove() {
-  classListNum.remove('on');
+//3.class check if
+function sidemenuSlide() {
+  let classNum = document.querySelector("#sidemenu").getAttribute('class');
+  console.log(classNum) //on
+
+  if (classNum == "on") {
+    classListNum.remove('on');
+  } else {
+     classListNum.add('on');
+  }
 }
